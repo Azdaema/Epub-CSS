@@ -23,12 +23,3 @@ em {
 em em {
   font-style: normal;
 }
-
-/* for single images */
-img {
-  max-width: 100%;
-  page-break-inside: avoid;
-}
-.center {
-  text-align: center;
-}
