@@ -4,12 +4,18 @@
 .bibliography img {
   width: 100px;
 }
-.bibliography .note {
+.bibliography dt {
+  font-weight: bold;
+}
+/* documenting links */
+.bibliography .link {
   color: gray;
   vertical-align: super;
   font-size: 0.6em;
 }
-.bibliography dt {
-  word-break: break-word;
-  font-weight: bold;
+.bibliography .link:before {
+  content: "[";
+}
+.bibliography .link:after {
+  content: "]";
 }
