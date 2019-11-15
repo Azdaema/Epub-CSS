@@ -1,10 +1,10 @@
+/* Texting wrapper */
 @font-face {
   font-family: "Helvetica Neue";
   font-weight: normal;
   font-style: normal;
   src: url(fonts/Helvetica-Neue.ttf);
 }
-/* Texting wrapper */
 .texting {
   max-width: 300px;
   font-family: "Helvetica Neue", sans-serif;
@@ -13,8 +13,11 @@
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
+
 /* All texts */
 .texting p {
+  text-indent: 0em;/* turn off paragraph indent */
+  page-break-inside: avoid;
   margin: 0 0 0.5em;
   border-radius: 1em;
   padding: 0.25em 0.75em;
@@ -29,6 +32,7 @@
   width: 0.5em;
   height: 1em;
 }
+
 /* Outgoing (sent from this phone) */
 .texting .out {
   float: right;
@@ -44,6 +48,7 @@
   border-left: 0.5em solid #1289fe;
   border-bottom-left-radius: 1em 0.5em;
 }
+
 /* Incoming (reply from other person) */
 .texting .in {
   float: left;
