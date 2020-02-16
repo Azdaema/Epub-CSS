@@ -1,86 +1,99 @@
-/* Texting wrapper */
 @font-face {
-  font-family: "Helvetica Neue";
-  font-weight: normal;
-  font-style: normal;
-  src: url(fonts/Helvetica-Neue.ttf);
+	font-family: "Helvetica Neue";
+	font-weight: normal;
+	font-style: normal;
+	src: url(fonts/Helvetica-Neue.ttf);
+
 }
+/* Texting wrapper */
 .texting {
-  max-width: 320px;
-  font-family: "Helvetica Neue", sans-serif;
-  display: table;
-  margin: auto;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+	max-width: 300px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	display: table;
+	margin: auto;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.texting dd,
+.texting dt {
+	page-break-inside: avoid;
+	display: block;
+	text-indent: 0em;
+	clear: both;
+	position: relative;
+/* Don't want hyphenated words in texts */
+	word-break: keep-all;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	-webkit-hyphens: none;
+	hyphens: none;
+	-epub-hyphens: none;
+	adobe-hyphenate: none;
+	overflow-wrap: break-word; /* but it does if it's THAT long */
 }
 
 /**************************************************
 *		Texts
 **************************************************/
 .texting dd {
-  display: block;
-  text-indent: 0em;
-  page-break-inside: avoid;
-  word-break: break-word;
-  margin: 1px 0;
-  border-radius: 1em;
-  padding: 0.25em 0.75em;
-  max-width: 70%;
-  clear: both;
-  position: relative;
-  border: 0.25em solid;
+	margin: 1px 0;
+	border-radius: 1em;
+	padding: 0.25em 0.75em;
+	border: 0.25em solid;
+	max-width: 70%;
 }
 .texting .in dd:last-of-type,
 .texting .out dd:last-of-type,
 .texting dd.in,
 .texting dd.out {
-  margin-bottom: 0.5em;
+	margin-bottom: 0.5em;
 }
 .texting .in dd:last-of-type:after,
 .texting .out dd:last-of-type:after,
 .texting dd.in:after,
 .texting dd.out:after {
-  content: "";
-  position: absolute;
-  bottom: -0.2em;
-  width: 0.5em;
-  height: 1em;
+	content: "";
+	position: absolute;
+	bottom: -0.2em;
+	width: 0.5em;
+	height: 1em;
 }
 
 /* Outgoing (sent from this phone) */
 .texting .out dd,
 .texting dd.out {
-  float: right;
-  background: #1289fe;
-  color: #FFF;
+	float: right;
+	background: #1289fe;
+	color: #FFF;
 /* night mode backup */
-  border-color: #1289fe;
-  border-right: 0.5em solid #1289fe;
-  padding-right: 0.5em;
+	border-color: #1289fe;
+	border-right: 0.5em solid #1289fe;
+	padding-right: 0.5em;
 }
 .texting .out dd:last-of-type:after,
 .texting dd.out:after {
-  right: -1em;
-  border-left: 0.5em solid #1289fe;
-  border-bottom-left-radius: 1em 0.5em;
+	right: -1em;
+	border-left: 0.5em solid #1289fe;
+	border-bottom-left-radius: 1em 0.5em;
 }
 
 /* Incoming (reply from other person) */
 .texting .in dd,
 .texting dd.in {
-  float: left;
-  background: #e5e5ea;
-  color: #000;
+	float: left;
+	background: #e5e5ea;
+	color: #000;
 /* night mode backup */
-  border-color: #e5e5ea;
-  border-left: 0.5em solid #e5e5ea;
-  padding-left: 0.5em;
+	border-color: #e5e5ea;
+	border-left: 0.5em solid #e5e5ea;
+	padding-left: 0.5em;
 }
 .texting .in dd:last-of-type:after,
 .texting dd.in:after {
-  left: -1em;
-  border-right: 0.5em solid #e5e5ea;
-  border-bottom-right-radius: 1em 0.5em;
+	left: -1em;
+	border-right: 0.5em solid #e5e5ea;
+	border-bottom-right-radius: 1em 0.5em;
 }
 
 /**************************************************
@@ -103,26 +116,22 @@
 *		Time
 **************************************************/
 .texting .time {
-  width: 100%;
-  display: table;
-  text-align: center;
-  color: #7B7C80;
-  font-size: 0.75em;
-  padding: 0.5em 0;
-  padding-bottom: 1em;
+	text-align: center;
+	color: #7B7C80;
+	font-size: 0.75em;
+	padding: 1em 0;
 }
 
 /**************************************************
 *		Header
 **************************************************/
 .texting .header {
-	position: relative;
 	background: #f2f2f7;
-	border: 1px solid rgba(60,60,67, 0.29);
+	border: 1px solid rgba(123,124,128, 0.5);
 	margin: 0;
-  padding: 1em 0;
+	padding: 1em 0;
 	text-align: center;
-	font-size: 1em;
+	font-size: 1.25em;
 	font-family: inherit;
 	font-weight: bold;
 	white-space: nowrap;
