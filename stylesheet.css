@@ -2,6 +2,7 @@
   margin-bottom: 5pt;
   margin-top: 5pt;
 }
+
 .calibre {
   display: block;
   font-size: 1em;
@@ -9,11 +10,13 @@
   padding-right: 0;
   margin: 0 5pt;
 }
-/* Paragraphs indented */
+
 .calibre p {
   display: block;
   margin: 1em 0;
   text-indent: 1.5em;
+   widows: 3;
+   orphans: 3;
 }
 
 /* double italic is non-italic */
